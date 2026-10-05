@@ -8,6 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero.jpg" media="(min-width: 961px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/hero-mobile.jpg" media="(max-width: 960px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/img/before.jpg">
+  <link rel="preload" as="image" href="assets/img/after.jpg">
+  <link rel="preload" as="image" href="assets/img/team.jpg">
+  <link rel="preload" as="image" href="assets/img/loading.jpg">
+  <link rel="preload" as="image" href="assets/img/about.jpg">
+  <link rel="preload" as="image" href="assets/img/cleanout.jpg">
+  <link rel="preload" as="image" href="assets/img/contact.jpg">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
@@ -157,8 +166,8 @@
         <a href="#buchung" class="btn btn-white btn-sm">Jetzt buchen</a>
         <svg class="cta-truck" aria-hidden="true"><use href="#i-truck"/></svg>
       </div>
-      <figure class="ba reveal img-reveal"><img src="assets/img/before.jpg" alt="Vollgestellte Garage vor der Entrümpelung" loading="lazy"><figcaption>Vorher</figcaption></figure>
-      <figure class="ba reveal img-reveal"><img src="assets/img/after.jpg" alt="Leere, besenreine Garage nach der Entrümpelung" loading="lazy"><figcaption>Nachher</figcaption></figure>
+      <figure class="ba reveal img-reveal"><img src="assets/img/before.jpg" alt="Vollgestellte Garage vor der Entrümpelung" decoding="async"><figcaption>Vorher</figcaption></figure>
+      <figure class="ba reveal img-reveal"><img src="assets/img/after.jpg" alt="Leere, besenreine Garage nach der Entrümpelung" decoding="async"><figcaption>Nachher</figcaption></figure>
     </div>
 
     <div class="info-grid">
@@ -200,7 +209,7 @@
         </svg>
       </div>
       <div class="info-card team-card reveal">
-        <img src="assets/img/team.jpg" alt="Das RaumKlar-Team vor dem Firmen-LKW" loading="lazy">
+        <img src="assets/img/team.jpg" alt="Das RaumKlar-Team vor dem Firmen-LKW" decoding="async">
         <div class="team-card-foot">
           <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
           <p>Vertrauen von Privat-<br>&amp; Gewerbekunden</p>
@@ -230,8 +239,8 @@
         <h2>Ihr Partner für professionelle Entrümpelung</h2>
         <p>RaumKlar ist ein inhabergeführter Familienbetrieb aus Köln. Seit 2011 helfen wir Privathaushalten, Hausverwaltungen und Unternehmen, sich schnell, sicher und verantwortungsvoll von allem zu trennen, was nicht mehr gebraucht wird. Brauchbares spenden wir, Wertstoffe recyceln wir – der Rest wird fachgerecht entsorgt.</p>
         <div class="about-box">
-          <img src="assets/img/loading.jpg" alt="Mitarbeiter beladen den LKW mit Möbeln" loading="lazy">
-          <ul class="checklist">
+          <img src="assets/img/loading.jpg" alt="Mitarbeiter beladen den LKW mit Möbeln" decoding="async">
+          <ul class="checklist stagger">
             <li><svg><use href="#i-check"/></svg>Umweltgerechte Entsorgung</li>
             <li><svg><use href="#i-check"/></svg>Express-Service am selben Tag</li>
             <li><svg><use href="#i-check"/></svg>Verbindlicher Festpreis</li>
@@ -247,11 +256,16 @@
         </div>
       </div>
       <div class="about-media reveal img-reveal" data-anim="right">
-        <img src="assets/img/about.jpg" alt="Zwei Mitarbeiter tragen eine Kommode aus einem Haus" loading="lazy">
+        <div class="about-img"><img data-parallax src="assets/img/about.jpg" alt="Zwei Mitarbeiter tragen eine Kommode aus einem Haus" decoding="async"></div>
         <div class="exp-badge"><strong>15+</strong><span>Jahre Erfahrung</span></div>
       </div>
     </div>
   </div>
+</section>
+
+<!-- ============ LAUFBAND ============ -->
+<section class="marquee" aria-hidden="true">
+  <div class="marquee-track"><div class="marquee-group"><span>Wohnungsauflösung</span><svg><use href="#i-recycle"/></svg><span>Kellerentrümpelung</span><svg><use href="#i-recycle"/></svg><span>Haushaltsauflösung</span><svg><use href="#i-recycle"/></svg><span>Büroräumung</span><svg><use href="#i-recycle"/></svg><span>Sperrmüllabholung</span><svg><use href="#i-recycle"/></svg><span>Garagenräumung</span><svg><use href="#i-recycle"/></svg><span>Nachlassräumung</span><svg><use href="#i-recycle"/></svg><span>Dachbodenentrümpelung</span><svg><use href="#i-recycle"/></svg></div><div class="marquee-group"><span>Wohnungsauflösung</span><svg><use href="#i-recycle"/></svg><span>Kellerentrümpelung</span><svg><use href="#i-recycle"/></svg><span>Haushaltsauflösung</span><svg><use href="#i-recycle"/></svg><span>Büroräumung</span><svg><use href="#i-recycle"/></svg><span>Sperrmüllabholung</span><svg><use href="#i-recycle"/></svg><span>Garagenräumung</span><svg><use href="#i-recycle"/></svg><span>Nachlassräumung</span><svg><use href="#i-recycle"/></svg><span>Dachbodenentrümpelung</span><svg><use href="#i-recycle"/></svg></div></div>
 </section>
 
 <!-- ============ LEISTUNGEN DETAIL (dunkel) ============ -->
@@ -266,23 +280,23 @@
       <a href="#kontakt" class="btn btn-lime btn-sm btn-icon">Angebot anfragen <span class="bi"><svg><use href="#i-arrow"/></svg></span></a>
     </div>
     <div class="sd-grid">
-      <article class="sd-card reveal">
+      <article class="sd-card reveal tilt">
         <div class="sd-top"><svg class="sd-icon"><use href="#i-house"/></svg><a href="#kontakt" class="sd-go" aria-label="Privat-Entrümpelung anfragen"><svg><use href="#i-arrow"/></svg></a></div>
         <h3>Privat-Entrümpelung</h3>
         <p>Wir räumen Wohnungen, Häuser und Nebenräume – inklusive Möbeln, Elektrogeräten und Hausrat.</p>
-        <ul><li>Wohnungs- &amp; Hausräumung</li><li>Keller, Dachboden &amp; Garage</li><li>Sperrmüll &amp; Elektrogeräte</li></ul>
+        <ul class="stagger"><li>Wohnungs- &amp; Hausräumung</li><li>Keller, Dachboden &amp; Garage</li><li>Sperrmüll &amp; Elektrogeräte</li></ul>
       </article>
-      <article class="sd-card reveal">
+      <article class="sd-card reveal tilt">
         <div class="sd-top"><svg class="sd-icon"><use href="#i-building"/></svg><a href="#kontakt" class="sd-go" aria-label="Gewerbe-Entrümpelung anfragen"><svg><use href="#i-arrow"/></svg></a></div>
         <h3>Gewerbe &amp; Büro</h3>
         <p>Diskret und planbar – auch außerhalb der Geschäftszeiten, damit Ihr Betrieb weiterläuft.</p>
-        <ul><li>Büro- &amp; Praxisauflösung</li><li>Lager- &amp; Ladenräumung</li><li>Aktenvernichtung nach DIN 66399</li></ul>
+        <ul class="stagger"><li>Büro- &amp; Praxisauflösung</li><li>Lager- &amp; Ladenräumung</li><li>Aktenvernichtung nach DIN 66399</li></ul>
       </article>
-      <article class="sd-card reveal">
+      <article class="sd-card reveal tilt">
         <div class="sd-top"><svg class="sd-icon"><use href="#i-file"/></svg><a href="#kontakt" class="sd-go" aria-label="Haushaltsauflösung anfragen"><svg><use href="#i-arrow"/></svg></a></div>
         <h3>Haushaltsauflösung</h3>
         <p>Wir übernehmen den kompletten Ablauf bei Nachlass oder Umzug – einfühlsam und zuverlässig.</p>
-        <ul><li>Nachlass- &amp; Messie-Räumung</li><li>Wertanrechnung möglich</li><li>Besenreine Übergabe</li></ul>
+        <ul class="stagger"><li>Nachlass- &amp; Messie-Räumung</li><li>Wertanrechnung möglich</li><li>Besenreine Übergabe</li></ul>
       </article>
     </div>
   </div>
@@ -315,26 +329,26 @@
       <p>Der genaue Festpreis richtet sich nach Menge, Zugang und Material. Die Besichtigung ist immer kostenlos.</p>
     </div>
     <div class="price-grid">
-      <div class="price reveal">
+      <div class="price reveal tilt">
         <h4>Kleinladung</h4>
         <p class="price-sub">Einzelne Möbel, Sperrmüll</p>
         <div class="price-val"><small>ab</small> 149 €</div>
-        <ul><li><svg><use href="#i-check"/></svg>bis ca. 3 m³</li><li><svg><use href="#i-check"/></svg>Abholung &amp; Tragen inklusive</li><li><svg><use href="#i-check"/></svg>Fachgerechte Entsorgung</li></ul>
+        <ul class="stagger"><li><svg><use href="#i-check"/></svg>bis ca. 3 m³</li><li><svg><use href="#i-check"/></svg>Abholung &amp; Tragen inklusive</li><li><svg><use href="#i-check"/></svg>Fachgerechte Entsorgung</li></ul>
         <a href="#kontakt" class="btn btn-outline btn-block">Angebot anfragen</a>
       </div>
-      <div class="price featured reveal">
+      <div class="price featured reveal tilt">
         <span class="price-tag">Beliebt</span>
         <h4>Keller &amp; Garage</h4>
         <p class="price-sub">Nebenräume komplett</p>
         <div class="price-val"><small>ab</small> 390 €</div>
-        <ul><li><svg><use href="#i-check"/></svg>bis ca. 10 m³</li><li><svg><use href="#i-check"/></svg>Besenreine Übergabe</li><li><svg><use href="#i-check"/></svg>Express möglich</li></ul>
+        <ul class="stagger"><li><svg><use href="#i-check"/></svg>bis ca. 10 m³</li><li><svg><use href="#i-check"/></svg>Besenreine Übergabe</li><li><svg><use href="#i-check"/></svg>Express möglich</li></ul>
         <a href="#kontakt" class="btn btn-primary btn-block">Angebot anfragen</a>
       </div>
-      <div class="price reveal">
+      <div class="price reveal tilt">
         <h4>Wohnungsauflösung</h4>
         <p class="price-sub">Komplette Wohnung / Haus</p>
         <div class="price-val"><small>ab</small> 990 €</div>
-        <ul><li><svg><use href="#i-check"/></svg>Festpreis nach Besichtigung</li><li><svg><use href="#i-check"/></svg>Wertanrechnung möglich</li><li><svg><use href="#i-check"/></svg>Demontage inklusive</li></ul>
+        <ul class="stagger"><li><svg><use href="#i-check"/></svg>Festpreis nach Besichtigung</li><li><svg><use href="#i-check"/></svg>Wertanrechnung möglich</li><li><svg><use href="#i-check"/></svg>Demontage inklusive</li></ul>
         <a href="#kontakt" class="btn btn-outline btn-block">Angebot anfragen</a>
       </div>
     </div>
@@ -347,17 +361,17 @@
     <div class="team-grid">
       <div class="team-media reveal img-reveal" data-anim="left">
         <span class="deco-dots tl"></span>
-        <div class="team-frame"><img src="assets/img/team.jpg" alt="Das Team von RaumKlar Entrümpelung" loading="lazy"></div>
+        <div class="team-frame"><img data-parallax src="assets/img/team.jpg" alt="Das Team von RaumKlar Entrümpelung" decoding="async"></div>
       </div>
       <div class="team-text reveal" data-anim="right">
         <span class="eyebrow line">Unser Team</span>
         <h2>Ein Team aus der Region, auf das Sie zählen können</h2>
         <p>Bei RaumKlar bekommen Sie keine wechselnden Subunternehmer, sondern ein festes, geschultes Team. Wir übernehmen alles – vom schweren Tragen bis zur verantwortungsvollen Entsorgung.</p>
         <p>Wir sind stolz darauf, unserer Nachbarschaft mit ehrlichen Preisen, verlässlichem Service und dem Anspruch zu dienen, Köln ein Stück sauberer und grüner zu machen.</p>
-        <div class="team-facts">
-          <div><strong>12</strong><span>Mitarbeiter</span></div>
-          <div><strong>4</strong><span>eigene LKW</span></div>
-          <div><strong>78&nbsp;%</strong><span>Recyclingquote</span></div>
+        <div class="team-facts stagger">
+          <div><strong><b data-count="12">0</b></strong><span>Mitarbeiter</span></div>
+          <div><strong><b data-count="4">0</b></strong><span>eigene LKW</span></div>
+          <div><strong><b data-count="78">0</b>&nbsp;%</strong><span>Recyclingquote</span></div>
         </div>
         <a href="#kontakt" class="btn btn-primary btn-sm">Kontakt aufnehmen</a>
       </div>
@@ -394,14 +408,14 @@
 
 <!-- ============ KONTAKT ============ -->
 <section class="contact" id="kontakt">
-  <div class="contact-bg" style="background-image:url('assets/img/cleanout.jpg')"></div>
+  <div class="contact-bg" data-parallax style="background-image:url('assets/img/cleanout.jpg')"></div>
   <div class="container">
     <div class="contact-grid">
       <div class="contact-text reveal" data-anim="left">
         <span class="eyebrow light">Kontakt</span>
         <h2>Wir sind persönlich für Sie da</h2>
         <p>Sie haben Fragen oder möchten eine kostenlose Besichtigung vereinbaren? Rufen Sie an, schreiben Sie uns oder kommen Sie vorbei.</p>
-        <div class="contact-list">
+        <div class="contact-list stagger">
           <a href="tel:+4922198765430" class="cl-item"><span class="cl-icon"><svg><use href="#i-phone"/></svg></span><span><small>Rufen Sie uns an</small><strong>0221 987 654 30</strong></span></a>
           <a href="mailto:info@raumklar-entruempelung.de" class="cl-item"><span class="cl-icon"><svg><use href="#i-mail"/></svg></span><span><small>Schreiben Sie uns</small><strong>info@raumklar-entruempelung.de</strong></span></a>
           <div class="cl-item"><span class="cl-icon"><svg><use href="#i-pin"/></svg></span><span><small>Besuchen Sie uns</small><strong>Industriestraße 12, 50735 Köln</strong></span></div>
@@ -447,9 +461,9 @@
       <h2>Häufige Fragen</h2>
       <p>Ihre Frage ist nicht dabei? Rufen Sie uns einfach an – wir beraten Sie gerne.</p>
       <a href="tel:+4922198765430" class="faq-call"><span class="cl-icon green"><svg><use href="#i-phone"/></svg></span><span><small>Kostenlose Beratung</small><strong>0221 987 654 30</strong></span></a>
-      <img class="faq-img" src="assets/img/contact.jpg" alt="Mitarbeiterin der Disposition am Telefon" loading="lazy">
+      <div class="faq-img-wrap reveal img-reveal"><img class="faq-img" data-parallax src="assets/img/contact.jpg" alt="Mitarbeiterin der Disposition am Telefon" decoding="async"></div>
     </div>
-    <div class="faq-list reveal" data-anim="right">
+    <div class="faq-list stagger">
       <details open><summary>Wie schnell können Sie kommen?<svg><use href="#i-plus"/></svg></summary><p>In der Regel innerhalb von 2–5 Werktagen. Mit unserem Express-Service räumen wir häufig sogar noch am selben Tag.</p></details>
       <details><summary>Muss ich bei der Entrümpelung anwesend sein?<svg><use href="#i-plus"/></svg></summary><p>Nein. Nach der Besichtigung genügt die Schlüsselübergabe. Wir melden uns nach Abschluss mit Fotos der besenreinen Räume.</p></details>
       <details><summary>Was kostet eine Entrümpelung?<svg><use href="#i-plus"/></svg></summary><p>Das hängt von Menge, Etage und Material ab. Nach der kostenlosen Besichtigung erhalten Sie einen verbindlichen Festpreis – ohne versteckte Kosten.</p></details>
@@ -474,7 +488,7 @@
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="container">
-    <div class="foot-grid">
+    <div class="foot-grid stagger">
       <div class="foot-brand">
         <a href="#top" class="logo light"><svg class="logo-mark"><use href="#i-recycle"/></svg><span class="logo-text"><strong>Raum<em>Klar</em></strong><small>Entrümpelung</small></span></a>
         <p>Ihr zuverlässiger Partner für Entrümpelung, Haushaltsauflösung und Entsorgung in Köln und Umgebung.</p>

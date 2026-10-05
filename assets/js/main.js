@@ -104,3 +104,81 @@
     form.addEventListener('input', e => e.target.classList.remove('invalid'));
   });
 })();
+
+/* ---------- Erweiterte Animationen ---------- */
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const show = sel => document.querySelectorAll(sel).forEach(el => el.classList.add('in'));
+  if (reduced) { show('.split, .stagger, .eyebrow'); return; }
+
+  // Überschriften Wort für Wort aufbauen
+  document.querySelectorAll('main h2, .cta-card h3, .call-inner h3').forEach(h => {
+    let i = 0;
+    const word = node => {
+      const w = document.createElement('span'), inner = document.createElement('span');
+      w.className = 'w'; inner.style.setProperty('--i', i++); inner.append(node); w.append(inner);
+      return w;
+    };
+    [...h.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(t => frag.append(t.trim() ? word(document.createTextNode(t)) : document.createTextNode(t)));
+        n.replaceWith(frag);
+      } else if (n.nodeName !== 'BR') {
+        const ph = document.createComment('');
+        n.replaceWith(ph); ph.replaceWith(word(n));
+      }
+    });
+    h.classList.add('split');
+  });
+
+  // Gestaffelte Listen
+  document.querySelectorAll('.stagger').forEach(list => [...list.children].forEach((c, i) => c.style.setProperty('--i', i)));
+
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    io.unobserve(e.target);
+  }), { threshold: 0.2, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.split, .stagger, .eyebrow').forEach(el => io.observe(el));
+
+  // Bild-Parallax beim Scrollen
+  const layers = [...document.querySelectorAll('[data-parallax]')];
+  let ticking = false;
+  const parallax = () => {
+    const vh = innerHeight;
+    layers.forEach(el => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      const progress = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2); // -1 … 1
+      const range = el.classList.contains('contact-bg') ? r.height * 0.1 : el.offsetHeight * 0.07;
+      el.style.translate = `0 ${(-progress * range).toFixed(1)}px`;
+    });
+    ticking = false;
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(parallax); } }, { passive: true });
+  addEventListener('resize', parallax);
+  parallax();
+
+  // 3D-Neigung und Lichtkegel (nur mit Maus)
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('.tilt').forEach(card => {
+      card.addEventListener('pointerenter', () => {
+        card.style.transitionDelay = '0s';
+        card.style.transition = 'transform .18s ease-out, box-shadow .4s, background .3s';
+        card.classList.add('tilting');
+      });
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        card.style.setProperty('--ry', `${((x - 0.5) * 9).toFixed(2)}deg`);
+        card.style.setProperty('--rx', `${((0.5 - y) * 9).toFixed(2)}deg`);
+        card.style.setProperty('--mx', `${(x * 100).toFixed(1)}%`);
+        card.style.setProperty('--my', `${(y * 100).toFixed(1)}%`);
+      });
+      card.addEventListener('pointerleave', () => {
+        card.style.transition = 'transform .7s cubic-bezier(.22,.8,.24,1), box-shadow .4s, background .3s';
+        card.classList.remove('tilting');
+      });
+    });
+  }
+})();
