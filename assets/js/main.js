@@ -182,3 +182,48 @@
     });
   }
 })();
+
+/* ---------- Vorher/Nachher-Regler & Rezensionen ---------- */
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Vorher/Nachher
+  document.querySelectorAll('.compare').forEach(box => {
+    const input = box.querySelector('input');
+    const set = v => box.style.setProperty('--pos', `${v}%`);
+    input.addEventListener('input', () => { box.classList.remove('auto'); set(input.value); });
+    input.addEventListener('pointerdown', () => box.classList.add('dragging'));
+    addEventListener('pointerup', () => box.classList.remove('dragging'));
+
+    // kurzer Schwenk beim ersten Erscheinen, damit klar ist, dass man ziehen kann
+    if (reduced) return;
+    const io = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      io.disconnect();
+      box.classList.add('auto');
+      const steps = [[400, 78], [1700, 30], [3000, 50]];
+      const timers = steps.map(([t, v]) => setTimeout(() => { set(v); input.value = v; }, t));
+      const stop = () => { timers.forEach(clearTimeout); box.classList.remove('auto'); };
+      setTimeout(() => box.classList.remove('auto'), 4500);
+      input.addEventListener('pointerdown', stop, { once: true });
+      input.addEventListener('keydown', stop, { once: true });
+    }, { threshold: 0.5 });
+    io.observe(box);
+  });
+
+  // Rezensionen durchblättern
+  const track = document.querySelector('.gr-track');
+  if (track) {
+    const prev = document.querySelector('.gr-prev'), next = document.querySelector('.gr-next');
+    const step = () => track.querySelector('.gr-card').getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 20);
+    const update = () => {
+      prev.disabled = track.scrollLeft < 8;
+      next.disabled = track.scrollLeft > track.scrollWidth - track.clientWidth - 8;
+    };
+    prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', update, { passive: true });
+    addEventListener('resize', update);
+    update();
+  }
+})();

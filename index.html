@@ -13,6 +13,7 @@
   <link rel="preload" as="image" href="assets/img/before.jpg">
   <link rel="preload" as="image" href="assets/img/after.jpg">
   <link rel="preload" as="image" href="assets/img/team.jpg">
+  <link rel="preload" as="image" href="assets/img/sorting.jpg">
   <link rel="preload" as="image" href="assets/img/loading.jpg">
   <link rel="preload" as="image" href="assets/img/about.jpg">
   <link rel="preload" as="image" href="assets/img/cleanout.jpg">
@@ -122,17 +123,19 @@
   </div>
 </section>
 
-<!-- Warum RaumKlar -->
-<section class="why-wrap">
+<!-- Fakten-Leiste -->
+<section class="trust-wrap">
   <div class="container">
-    <div class="why">
-      <h2>Warum <span>RaumKlar</span>?</h2>
-      <div class="why-grid">
-        <div class="why-item"><span class="why-icon"><svg><use href="#i-shield"/></svg></span><p>Versichert &amp; zertifiziert</p></div>
-        <div class="why-item"><span class="why-icon"><svg><use href="#i-file"/></svg></span><p>Kostenlose Besichtigung</p></div>
-        <div class="why-item"><span class="why-icon"><svg><use href="#i-euro"/></svg></span><p>Verbindlicher Festpreis</p></div>
-        <div class="why-item"><span class="why-icon"><svg><use href="#i-leaf"/></svg></span><p>Umweltgerechte Entsorgung</p></div>
-        <div class="why-item"><span class="why-icon"><svg><use href="#i-clock"/></svg></span><p>Express am selben Tag</p></div>
+    <div class="trust">
+      <div class="trust-lead">
+        <h2>Darauf können Sie sich verlassen</h2>
+        <p>Seit 2011 in Köln – inhabergeführt, mit festem Team.</p>
+      </div>
+      <div class="trust-facts">
+        <div class="trust-fact"><strong>Festpreis</strong><span>Verbindlich nach der Besichtigung, ohne Nachforderungen.</span></div>
+        <div class="trust-fact"><strong>24&nbsp;h</strong><span>Express-Räumung oft schon am selben oder nächsten Tag.</span></div>
+        <div class="trust-fact"><strong>0&nbsp;€</strong><span>Besichtigung und Angebot sind immer kostenlos.</span></div>
+        <div class="trust-fact"><strong>Besenrein</strong><span>Übergabefertig für Vermieter, Makler oder Käufer.</span></div>
       </div>
     </div>
   </div>
@@ -166,8 +169,14 @@
         <a href="#buchung" class="btn btn-white btn-sm">Jetzt buchen</a>
         <svg class="cta-truck" aria-hidden="true"><use href="#i-truck"/></svg>
       </div>
-      <figure class="ba reveal img-reveal"><img src="assets/img/before.jpg" alt="Vollgestellte Garage vor der Entrümpelung" decoding="async"><figcaption>Vorher</figcaption></figure>
-      <figure class="ba reveal img-reveal"><img src="assets/img/after.jpg" alt="Leere, besenreine Garage nach der Entrümpelung" decoding="async"><figcaption>Nachher</figcaption></figure>
+      <div class="compare reveal" style="--pos:50%">
+        <img src="assets/img/after.jpg" alt="Leere, besenreine Garage nach der Entrümpelung" decoding="async">
+        <img class="compare-before" src="assets/img/before.jpg" alt="Vollgestellte Garage vor der Entrümpelung" decoding="async">
+        <span class="compare-label l">Vorher</span>
+        <span class="compare-label r">Nachher</span>
+        <span class="compare-handle" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="m9 6-6 6 6 6"/><path d="m15 6 6 6-6 6"/></svg></i></span>
+        <input type="range" min="0" max="100" value="50" step="0.1" aria-label="Vorher-Nachher-Vergleich verschieben">
+      </div>
     </div>
 
     <div class="info-grid">
@@ -183,7 +192,7 @@
         <p>Transparente Preise ohne versteckte Kosten. Kostenlose, unverbindliche Besichtigung.</p>
         <a href="#preise" class="link-arrow sm">Angebot holen <svg><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="info-card map-card reveal" data-anim="zoom" id="einsatzgebiet">
+      <div class="info-card map-card reveal" data-anim="zoom">
         <svg viewBox="0 0 240 260" preserveAspectRatio="xMidYMid slice" class="map-svg" role="img" aria-label="Karte des Einsatzgebiets rund um Köln">
           <rect width="240" height="260" fill="#e6efe4"/>
           <g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round">
@@ -320,6 +329,29 @@
 </section>
 
 
+<!-- ============ VERWERTUNG ============ -->
+<section class="section reuse" id="verwertung">
+  <div class="container">
+    <div class="reuse-grid">
+      <div class="reuse-media reveal img-reveal" data-anim="left">
+        <div class="reuse-img"><img data-parallax src="assets/img/sorting.jpg" alt="Mitarbeiter sortiert Altholz auf dem Wertstoffhof" decoding="async"></div>
+        <div class="reuse-note"><svg><use href="#i-file"/></svg><span><strong>Entsorgungsnachweis</strong>auf Wunsch zu jedem Auftrag</span></div>
+      </div>
+      <div class="reuse-text reveal" data-anim="right">
+        <span class="eyebrow">Verwertung</span>
+        <h2>Was mit Ihren Sachen passiert</h2>
+        <p>Entrümpeln heißt bei uns nicht „alles auf die Kippe“. Wir sortieren schon beim Aufladen vor und fahren jede Fraktion dorthin, wo sie am sinnvollsten weiterverwendet wird.</p>
+        <ul class="reuse-bars stagger">
+          <li style="--v:46%"><div><strong>Recycling</strong><span>Holz, Metall, Elektrogeräte, Papier</span></div><em><b data-count="46">0</b>&nbsp;%</em><i></i></li>
+          <li style="--v:32%"><div><strong>Wiederverwendung &amp; Spende</strong><span>Möbel und Hausrat an Sozialkaufhäuser in Köln</span></div><em><b data-count="32">0</b>&nbsp;%</em><i></i></li>
+          <li style="--v:22%"><div><strong>Fachgerechte Entsorgung</strong><span>Restmüll und Sonderabfälle über zertifizierte Betriebe</span></div><em><b data-count="22">0</b>&nbsp;%</em><i></i></li>
+        </ul>
+        <p class="reuse-foot">Durchschnitt aller Aufträge 2025, nach Gewicht.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PREISE ============ -->
 <section class="section pricing" id="preise">
   <div class="container narrow">
@@ -380,28 +412,91 @@
 </section>
 
 <!-- ============ BEWERTUNGEN ============ -->
-<section class="section reviews">
-  <div class="container narrow">
-    <div class="section-head center reveal">
-      <span class="eyebrow">Kundenstimmen</span>
-      <h2>Das sagen unsere Kunden</h2>
+<section class="section reviews" id="bewertungen">
+  <div class="container">
+    <div class="gr">
+      <aside class="gr-summary reveal" data-anim="left">
+        <div class="gr-brand"><span class="g-logo" aria-hidden="true"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span><span>Google-Rezensionen</span></div>
+        <div class="gr-score"><strong>4,9</strong><div><div class="gr-stars lg"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><small>312 Rezensionen</small></div></div>
+        <ul class="gr-dist"><li><span>5</span><i><b style="--v:100.0%"></b></i><em>289</em></li><li><span>4</span><i><b style="--v:6.2%"></b></i><em>18</em></li><li><span>3</span><i><b style="--v:1.0%"></b></i><em>3</em></li><li><span>2</span><i><b style="--v:0.3%"></b></i><em>1</em></li><li><span>1</span><i><b style="--v:0.3%"></b></i><em>1</em></li></ul>
+        <a href="#" class="btn btn-outline btn-sm btn-block">Alle Rezensionen auf Google</a>
+      </aside>
+      <div class="gr-main">
+        <div class="gr-head reveal">
+          <h2>Was Kunden nach der Räumung schreiben</h2>
+          <div class="gr-nav"><button type="button" class="gr-prev" aria-label="Vorherige Rezensionen"><svg><use href="#i-arrow"/></svg></button><button type="button" class="gr-next" aria-label="Weitere Rezensionen"><svg><use href="#i-arrow"/></svg></button></div>
+        </div>
+        <div class="gr-track reveal">
+        <article class="gr-card">
+          <header><span class="gr-av" style="background:#7b5ea7">S</span><div><strong>Sabine Mertens</strong><small>vor 2 Wochen</small></div><span class="gr-g" aria-label="Google-Rezension"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span></header>
+          <div class="gr-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <p>Nach dem Tod meiner Mutter mussten wir ihre Wohnung in Nippes innerhalb von drei Wochen übergeben. Herr Yilmaz kam am nächsten Tag zur Besichtigung, das Angebot hatten wir abends im Postfach. Die Jungs waren pünktlich um 7:30 da und haben auch die Fotoalben, die wir übersehen hatten, beiseitegelegt. Vermieter hat ohne Beanstandung abgenommen.</p>
+          <footer>Haushaltsauflösung · Köln-Nippes</footer>
+        </article>
+        <article class="gr-card">
+          <header><span class="gr-av" style="background:#c2632f">T</span><div><strong>Thomas Kröger</strong><small>vor 1 Monat</small></div><span class="gr-g" aria-label="Google-Rezension"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span></header>
+          <div class="gr-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <p>Morgens angerufen, um 14 Uhr war die Garage leer. Preis wie am Telefon besprochen. Gerne wieder.</p>
+          <footer>Garagenräumung · Leverkusen</footer>
+        </article>
+        <article class="gr-card">
+          <header><span class="gr-av" style="background:#2f7d8c">J</span><div><strong>Julia Brandt</strong><small>vor 1 Monat</small></div><span class="gr-g" aria-label="Google-Rezension"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span></header>
+          <div class="gr-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <p>Wir haben unser altes Büro in Ehrenfeld räumen lassen, 30 Arbeitsplätze plus Archiv. Lief komplett am Wochenende, montags war besenrein. Für die Akten gab es ein Vernichtungsprotokoll, das war uns wichtig.</p>
+          <footer>Büroauflösung · Köln-Ehrenfeld</footer>
+        </article>
+        <article class="gr-card">
+          <header><span class="gr-av" style="background:#4f7a3a">M</span><div><strong>Markus Heinen</strong><small>vor 2 Monaten</small></div><span class="gr-g" aria-label="Google-Rezension"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span></header>
+          <div class="gr-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg class="off"><use href="#i-star"/></svg></div>
+          <p>Gute Arbeit, Keller ist leer und sauber. Der LKW kam eine knappe Stunde später als angekündigt, es wurde aber vorher angerufen. Einen Stern Abzug dafür, sonst alles top.</p>
+          <footer>Kellerentrümpelung · Hürth</footer>
+        </article>
+        <article class="gr-card">
+          <header><span class="gr-av" style="background:#b0456b">A</span><div><strong>Aylin Demir</strong><small>vor 3 Monaten</small></div><span class="gr-g" aria-label="Google-Rezension"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span></header>
+          <div class="gr-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <p>Dritter Stock ohne Aufzug, altes Klavier inklusive. Kein Kratzer im Treppenhaus. Für die Schrankwand und zwei Kommoden wurden uns 120 € angerechnet, damit hatte ich gar nicht gerechnet.</p>
+          <footer>Wohnungsauflösung · Köln-Sülz</footer>
+        </article>
+        <article class="gr-card">
+          <header><span class="gr-av" style="background:#55606e">P</span><div><strong>Peter Wolff</strong><small>vor 4 Monaten</small></div><span class="gr-g" aria-label="Google-Rezension"><svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg></span></header>
+          <div class="gr-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <p>Hausverwaltung, wir beauftragen RaumKlar regelmäßig für Kellerabteile und Messie-Wohnungen. Zuverlässig, Rechnung stimmt immer mit dem Angebot überein.</p>
+          <footer>Hausverwaltung · Bergisch Gladbach</footer>
+        </article>
+        </div>
+      </div>
     </div>
-    <div class="rev-grid">
-      <figure class="rev reveal">
-        <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-        <blockquote>„Nach dem Tod meiner Mutter hat RaumKlar die komplette Wohnung aufgelöst. Sehr einfühlsam, pünktlich und am Ende wirklich besenrein. Der Festpreis wurde genau eingehalten."</blockquote>
-        <figcaption><span class="rev-av">SM</span><div><strong>Sabine M.</strong><small>Haushaltsauflösung, Köln-Nippes</small></div></figcaption>
-      </figure>
-      <figure class="rev reveal">
-        <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-        <blockquote>„Morgens angerufen, nachmittags war die Garage leer. Freundliches Team, faire Abrechnung – absolute Empfehlung."</blockquote>
-        <figcaption><span class="rev-av">TK</span><div><strong>Thomas K.</strong><small>Garagenräumung, Leverkusen</small></div></figcaption>
-      </figure>
-      <figure class="rev reveal">
-        <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-        <blockquote>„Wir haben unser altes Büro mit 30 Arbeitsplätzen räumen lassen. Alles am Wochenende erledigt, inklusive Aktenvernichtung. Top organisiert."</blockquote>
-        <figcaption><span class="rev-av">JB</span><div><strong>Julia B.</strong><small>Büroauflösung, Köln-Ehrenfeld</small></div></figcaption>
-      </figure>
+  </div>
+</section>
+
+<!-- ============ EINSATZGEBIET ============ -->
+<section class="section area" id="einsatzgebiet">
+  <div class="container">
+    <div class="area-grid">
+      <div class="area-text reveal" data-anim="left">
+        <span class="eyebrow">Einsatzgebiet</span>
+        <h2>In ganz Köln und 60 km drumherum</h2>
+        <p>Unser Betriebshof liegt in Köln-Niehl. Von dort sind wir in allen Kölner Veedeln und im gesamten Umland unterwegs – links- wie rechtsrheinisch.</p>
+        <div class="area-facts">
+          <div><strong>0&nbsp;€</strong><span>Anfahrt im Umkreis von 30 km</span></div>
+          <div><strong>ab 0,90&nbsp;€/km</strong><span>darüber hinaus, im Angebot ausgewiesen</span></div>
+        </div>
+        <ul class="area-chips stagger"><li>Innenstadt</li><li>Ehrenfeld</li><li>Nippes</li><li>Lindenthal</li><li>Sülz</li><li>Rodenkirchen</li><li>Porz</li><li>Mülheim</li><li>Kalk</li><li>Chorweiler</li><li>Leverkusen</li><li>Bergisch Gladbach</li><li>Frechen</li><li>Hürth</li><li>Brühl</li><li>Pulheim</li><li>Dormagen</li><li>Troisdorf</li><li>Bonn</li><li>Kerpen</li></ul>
+        <p class="area-foot">Ihr Ort ist nicht dabei? <a href="#kontakt">Fragen Sie kurz nach</a> – meistens klappt es trotzdem.</p>
+      </div>
+      <div class="area-map reveal" data-anim="right">
+        <svg viewBox="0 0 600 520" class="area-svg" role="img" aria-label="Karte: Einsatzgebiet rund um Köln mit 30- und 60-Kilometer-Radius">
+          <path class="area-rhein" d="M322 -10 C300 70 344 130 318 200 C298 260 330 310 316 380 C306 440 350 480 342 530"/>
+          <circle class="area-ring r2" cx="300" cy="250" r="232"/>
+          <circle class="area-ring r1" cx="300" cy="250" r="120"/>
+          <text class="area-km" x="300" y="122" text-anchor="middle">30 km</text>
+          <text class="area-km" x="300" y="12" text-anchor="middle">60 km</text>
+          <g class="area-dot" style="--d:1"><circle cx="352" cy="150" r="5"/><text x="364" y="154" text-anchor="start">Leverkusen</text></g><g class="area-dot" style="--d:2"><circle cx="432" cy="214" r="5"/><text x="444" y="218" text-anchor="start">Berg. Gladbach</text></g><g class="area-dot" style="--d:3"><circle cx="204" cy="262" r="5"/><text x="192" y="266" text-anchor="end">Frechen</text></g><g class="area-dot" style="--d:4"><circle cx="232" cy="326" r="5"/><text x="220" y="330" text-anchor="end">Hürth</text></g><g class="area-dot" style="--d:5"><circle cx="262" cy="388" r="5"/><text x="250" y="392" text-anchor="end">Brühl</text></g><g class="area-dot" style="--d:6"><circle cx="196" cy="172" r="5"/><text x="184" y="176" text-anchor="end">Pulheim</text></g><g class="area-dot" style="--d:7"><circle cx="250" cy="88" r="5"/><text x="238" y="92" text-anchor="end">Dormagen</text></g><g class="area-dot" style="--d:8"><circle cx="428" cy="372" r="5"/><text x="440" y="376" text-anchor="start">Troisdorf</text></g><g class="area-dot" style="--d:9"><circle cx="376" cy="448" r="5"/><text x="388" y="452" text-anchor="start">Bonn</text></g><g class="area-dot" style="--d:10"><circle cx="110" cy="300" r="5"/><text x="98" y="304" text-anchor="end">Kerpen</text></g><g class="area-dot" style="--d:11"><circle cx="440" cy="296" r="5"/><text x="452" y="300" text-anchor="start">Rösrath</text></g>
+          <circle class="area-pulse" cx="300" cy="250" r="14"/>
+          <g class="area-pin" transform="translate(300 252)"><path d="M0 -40c-13 0-24 10.500-24 24 0 18 24 40 24 40s24-22 24-40c0-13.500-11-24-24-24z"/><circle cy="-16" r="8.500"/></g>
+          <text class="area-main" x="300" y="302" text-anchor="middle">Köln</text>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
